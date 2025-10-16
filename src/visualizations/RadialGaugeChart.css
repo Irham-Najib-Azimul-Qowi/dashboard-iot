@@ -1,10 +1,14 @@
 /* src/visualizations/RadialGaugeChart.css */
 
 .page-container {
-  padding: 1rem; /* Padding dikurangi agar lebih pas di iframe kecil */
+  /* HAPUS PADDING AGAR TIDAK MENGGANGGU DI IFRAME */
+  padding: 0;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
+  display: flex; /* Tambahkan flex untuk memusatkan kartu */
+  justify-content: center;
+  align-items: center;
 }
 
 .loading-text {
@@ -32,26 +36,26 @@
 }
 
 .radial-chart-center-text .value {
-  /* Min: 1.5rem, Ideal: 12vw, Max: 4rem */
-  font-size: clamp(1.5rem, 12vw, 4rem);
+  /* Min: 1.5rem, Ideal: 20vw, Max: 4rem */
+  /* Nilai ideal (vw) diperbesar agar lebih responsif di iframe */
+  font-size: clamp(1.5rem, 20vw, 4rem);
   font-weight: 700;
   display: block;
   line-height: 1;
 }
 
 .radial-chart-center-text .unit {
-  font-size: clamp(0.75rem, 4vw, 1.2rem);
+  font-size: clamp(0.75rem, 6vw, 1.2rem);
   color: #a0a0a0;
 }
 
 .radial-tolerance-info {
   position: absolute;
-  bottom: 15%;
-  width: 80%;
-  max-width: 350px;
+  bottom: 15%; /* Jarak dari bawah */
+  width: 90%; /* Lebar relatif terhadap wrapper */
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.6rem, 3vw, 0.9rem);
+  font-size: clamp(0.6rem, 5vw, 0.9rem);
   color: #888;
   font-weight: 500;
 }
