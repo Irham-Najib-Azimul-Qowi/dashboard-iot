@@ -1,4 +1,5 @@
 /* src/index.css */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -6,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #1a1b1e; /* Warna latar belakang gelap utama */
+  background-color: #1a1b1e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,18 +15,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-#root {
-  width: 100%;
-  height: 100vh;
+/* ✅ TAMBAHKAN ATURAN BARU INI */
+* {
   margin: 0;
   padding: 0;
-  text-align: center;
+  box-sizing: border-box; /* Sangat penting untuk layout yang konsisten */
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Mencegah scrollbar yang tidak diinginkan di iframe */
 }
