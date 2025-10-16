@@ -120,9 +120,30 @@ function App() {
       <Route path="/energy-delivery-2" element={<MetricDisplay title="Energy Delivery #2" dataPath="/sensor_data/Edel" unit="kWh" />} />
 
       {/* 12. Arus Rata-rata */}
-      <Route path="/arus-rata-rata" element={<GaugeChart title="Arus Rata-rata" dataPath="/sensor_data/Iavg" unit="A" />} />
+      {/* ✅ DIUBAH: Tambahkan standar untuk Arus (misal: 0-10 Ampere) */}
+      <Route 
+        path="/arus-rata-rata" 
+        element={<GaugeChart 
+          title="Arus Rata-rata" 
+          dataPath="/sensor_data/Iavg" 
+          unit="A" 
+          minValue={0} 
+          maxValue={10} 
+        />} 
+      />
+      
       {/* 13. Average Voltage */}
-      <Route path="/average-voltage" element={<GaugeChart title="Average Voltage" dataPath="/sensor_data/Vavg" unit="V" />} />
+      {/* ✅ DIUBAH: Tambahkan standar untuk Tegangan (misal: 180-250 Volt) */}
+      <Route 
+        path="/average-voltage" 
+        element={<GaugeChart 
+          title="Average Voltage" 
+          dataPath="/sensor_data/Vavg" 
+          unit="V" 
+          minValue={11000} 
+          maxValue={22000} 
+        />} 
+      />
       
       {/* --- Rute untuk data dari Firebase Firestore --- */}
 

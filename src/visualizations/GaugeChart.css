@@ -1,4 +1,5 @@
 /* src/visualizations/GaugeChart.css */
+
 .page-container {
   padding: 0;
   width: 100%;
@@ -7,42 +8,68 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.card-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scalable-wrapper-gauge {
+  width: 400px;
+  height: 250px;
+  transform-origin: center center;
+}
+
+/* Wrapper baru untuk menampung chart dan label */
+.visual-elements-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .gauge-chart-wrapper {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 
 .gauge-chart-center-text {
   position: absolute;
-  top: 70%;
+  top: 70%; /* Sedikit turun agar pas di tengah donat */
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .gauge-chart-center-text .value {
-  font-size: clamp(1.5rem, 12vmin, 3rem);
+  font-size: 40px;
   font-weight: 700;
-  display: block;
+  line-height: 1;
 }
 
 .gauge-chart-center-text .unit {
-  font-size: clamp(0.7rem, 5vmin, 1rem);
-  color: #a0a0a0;
+  font-size: 40px;
+  color: #c0c0c0;
 }
 
-.gauge-tolerance-info {
+/* ✅ CSS BARU UNTUK LABEL DI DALAM KARTU */
+.internal-labels {
   position: absolute;
-  bottom: 5%;
-  width: 100%;
-  padding: 0 10%;
-  box-sizing: border-box;
+  bottom: 0; /* Jarak dari bawah kartu */
+  left: 3px;
+  right: 3px;
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.6rem, 3vmin, 0.9rem);
-  color: #888;
+  font-size: 13px; /* Ukuran font yang pas */
+  font-weight: 500;
+  color: #e0e0e0; /* Warna kontras tinggi */
 }

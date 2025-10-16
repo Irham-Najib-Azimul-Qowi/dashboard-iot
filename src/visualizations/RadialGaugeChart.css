@@ -8,15 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-.loading-text {
-  color: #a0a0a0;
-  font-size: clamp(0.8rem, 4vmin, 1.2rem);
-}
-
-.radial-chart-wrapper {
-  position: relative;
+.card-content-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -24,38 +19,60 @@
   align-items: center;
 }
 
+.scalable-wrapper {
+  width: 400px;
+  height: 400px;
+  transform-origin: center center;
+}
+
+/* Wrapper baru untuk menampung chart dan label */
+.visual-elements-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.radial-chart-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .radial-chart-center-text {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  color: #fff;
-  user-select: none;
 }
 
 .radial-chart-center-text .value {
-  /* ✅ DIUBAH: Menggunakan vmin */
-  font-size: clamp(1.5rem, 18vmin, 5rem);
+  font-size: 50px;
   font-weight: 700;
-  display: block;
   line-height: 1;
 }
 
 .radial-chart-center-text .unit {
-  /* ✅ DIUBAH: Menggunakan vmin */
-  font-size: clamp(0.75rem, 6vmin, 1.5rem);
-  color: #a0a0a0;
+  font-size: 50px;
+  color: #c0c0c0;
+  margin-top: 5px;
 }
 
-.radial-tolerance-info {
+/* ✅ CSS BARU UNTUK LABEL DI DALAM KARTU */
+.internal-labels {
   position: absolute;
-  bottom: 15%;
-  width: 90%;
+  bottom: 20px; /* Jarak dari bawah kartu */
+  left: 20px;
+  right: 20px;
   display: flex;
   justify-content: space-between;
-  /* ✅ DIUBAH: Menggunakan vmin */
-  font-size: clamp(0.6rem, 3vmin, 0.9rem);
-  color: #888;
+  font-size: 500px; /* Ukuran font yang pas */
   font-weight: 500;
+  color: #e0e0e0; /* Warna kontras tinggi */
 }
