@@ -1,0 +1,24 @@
+/* src/visualizations/MetricDisplay.css */
+
+.metric-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.metric-value {
+  font-size: 6rem; /* Ukuran angka yang sangat besar */
+  font-weight: 700;
+  line-height: 1;
+}
+
+.metric-unit {
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  margin-top: 0.5rem;
+}

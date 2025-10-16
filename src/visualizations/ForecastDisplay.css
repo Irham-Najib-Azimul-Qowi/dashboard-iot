@@ -1,0 +1,55 @@
+/* src/visualizations/ForecastDisplay.css */
+
+.forecast-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecast-metrics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.forecast-metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-basis: 45%; /* Setiap item mengambil sekitar 45% lebar */
+}
+
+.metric-label {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin-bottom: 1rem;
+}
+
+.metric-value-large {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.metric-value-large.currency {
+  font-size: 3rem; /* Sedikit lebih kecil agar pas */
+}
+
+.metric-unit-large {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.forecast-separator {
+  width: 2px;
+  height: 150px;
+  background-color: #444752;
+  border-radius: 1px;
+}

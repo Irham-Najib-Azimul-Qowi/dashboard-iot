@@ -1,0 +1,68 @@
+.homepage {
+  padding: 2rem 4rem;
+  color: #f0f0f0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.homepage h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.homepage p {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Style untuk setiap grup navigasi */
+.nav-group {
+  margin-bottom: 3rem; /* Jarak antar grup */
+}
+
+/* Style untuk judul grup */
+.nav-group-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 1.5px;
+  text-align: left;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #3c404a; /* Garis pemisah tipis */
+}
+
+/* Grid untuk tombol di dalam setiap grup */
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Style untuk setiap tombol/link navigasi */
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2d34;
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  transform: translateY(-4px); /* Efek mengangkat saat di-hover */
+  background-color: #3c404a;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-color: #A0E8A8; /* Border dengan warna aksen saat di-hover */
+}

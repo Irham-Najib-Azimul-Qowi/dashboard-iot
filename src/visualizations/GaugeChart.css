@@ -1,0 +1,38 @@
+/* src/visualizations/GaugeChart.css */
+
+.gauge-chart-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: 100%;
+}
+
+.gauge-chart-center-text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.gauge-chart-center-text .value {
+  font-size: 3rem;
+  font-weight: 700;
+  display: block;
+}
+
+.gauge-chart-center-text .unit {
+  font-size: 1rem;
+  color: #a0a0a0;
+}
+
+.gauge-tolerance-info {
+  position: absolute;
+  bottom: 24px;
+  width: calc(100% - 48px);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #888;
+}
