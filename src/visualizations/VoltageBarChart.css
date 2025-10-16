@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: clamp(0.5rem, 4vw, 1rem); /* Padding dinamis */
   box-sizing: border-box;
 }
 
@@ -21,29 +21,29 @@
 }
 
 .health-bar-info .current-value {
-  font-size: 2.5rem;
+  font-size: clamp(1.2rem, 10vw, 2.5rem);
   font-weight: 700;
   color: #fff;
 }
 
 .health-bar-info .tolerance {
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 4vw, 1rem);
   color: #888;
 }
 
 .health-bar-container {
   width: 100%;
-  height: 40px;
-  background-color: #444752; /* Warna latar belakang bar */
+  height: clamp(25px, 10vh, 40px); /* Tinggi bar dinamis */
+  background-color: #444752;
   border-radius: 8px;
-  overflow: hidden; /* Penting agar bar-fill tidak keluar */
+  overflow: hidden;
   border: 2px solid #555;
 }
 
 .health-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #A0E8A8, #86E3A6); /* Gradasi hijau */
+  background: linear-gradient(90deg, #A0E8A8, #86E3A6);
   border-radius: 6px;
-  transition: width 0.5s ease-out; /* Animasi saat nilai berubah */
+  transition: width 0.5s ease-out;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
 }

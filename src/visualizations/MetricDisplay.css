@@ -12,13 +12,13 @@
 }
 
 .metric-value {
-  font-size: 6rem; /* Ukuran angka yang sangat besar */
+  font-size: clamp(2rem, 18vw, 6rem);
   font-weight: 700;
   line-height: 1;
 }
 
 .metric-unit {
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
   color: #a0a0a0;
   margin-top: 0.5rem;
 }

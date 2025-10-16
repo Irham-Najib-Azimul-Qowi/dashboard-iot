@@ -1,29 +1,29 @@
+/* src/App.css */
+
 .homepage {
-  padding: 2rem 4rem;
+  padding: 2rem; /* Padding lebih fleksibel */
   color: #f0f0f0;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .homepage h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Font dinamis */
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
 .homepage p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem); /* Font dinamis */
   color: #a0a0a0;
   text-align: center;
   margin-bottom: 3rem;
 }
 
-/* Style untuk setiap grup navigasi */
 .nav-group {
-  margin-bottom: 3rem; /* Jarak antar grup */
+  margin-bottom: 3rem;
 }
 
-/* Style untuk judul grup */
 .nav-group-title {
   font-size: 1rem;
   text-transform: uppercase;
@@ -32,17 +32,16 @@
   text-align: left;
   margin-bottom: 1.2rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #3c404a; /* Garis pemisah tipis */
+  border-bottom: 1px solid #3c404a;
 }
 
-/* Grid untuk tombol di dalam setiap grup */
 .nav-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.2rem;
+  /* Grid lebih fleksibel di layar kecil */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
-/* Style untuk setiap tombol/link navigasi */
 .nav-link {
   display: flex;
   align-items: center;
@@ -53,16 +52,17 @@
   padding: 1.2rem;
   border-radius: 10px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem; /* Sedikit lebih kecil agar muat */
   transition: all 0.2s ease-in-out;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid transparent;
+  min-height: 60px; /* Tinggi minimum */
 }
 
 .nav-link:hover {
-  transform: translateY(-4px); /* Efek mengangkat saat di-hover */
+  transform: translateY(-4px);
   background-color: #3c404a;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   color: #fff;
-  border-color: #A0E8A8; /* Border dengan warna aksen saat di-hover */
+  border-color: #A0E8A8;
 }
